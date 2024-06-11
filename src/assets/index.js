@@ -31,7 +31,7 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import hand from "./tech/hand.png";
-import webb from "./tech/Webb.png";
+import webb from "./tech/webb.png";
 import bone from "./tech/bone.png";
 
 export {
