@@ -27,7 +27,7 @@ const Hero = () => {
               }}
               className='bg-tertiary rounded-[20px] p-4 w-fit'
             >
-              <a href="src\assets\resume\som resume (2).pdf" download>
+              <a href="src\assets\resume\resume.pdf" download>
                 <button type="button" className=" text-lg font-bold">Download CV</button>
               </a>
             </div>
