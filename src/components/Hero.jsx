@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
+const handleResumeDownload = () => {
+
+  const link = document.createElement("a");
+  link.href = "../assets/resume/resume.pdf";
+  link.download = "resume.pdf"; // Set the desired file name
+  link.click();
+};
+
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
@@ -18,20 +26,6 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Somanath</span>
           </h1>
-          <div className='w-fit green-pink-gradient p-[1px] rounded-[20px] shadow-card mt-6 ml-1'>
-            <div
-              options={{
-                max: 45,
-                scale: 1,
-                speed: 450,
-              }}
-              className='bg-tertiary rounded-[20px] p-4 w-fit'
-            >
-              <a href="src\assets\resume\resume.pdf" download>
-                <button type="button" className=" text-lg font-bold">Download CV</button>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
