@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-       I am a versatile professional with unique blend of skills in Full stack development, Data analysis,
+       I am a versatile professional with unique blend of skills in Python, Data analysis,
        Computer vison and AI&ML. As a full stack developer, I proficiently handle both front-end and back-end development,
        utilizing technologies like Three.js and React to create dynamic, user-friendly web applications. 
        My passion for AI and continuous learning drives me to stay updated with the latest advancements in technology 
