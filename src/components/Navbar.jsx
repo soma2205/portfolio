@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import resumePdf from "../assets/resume/resume.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -24,6 +25,14 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+    const handleResumeDownload = () => {
+      // Trigger the download
+      const link = document.createElement("a");
+      link.href = resumePdf;
+      link.download = "Somanath_Resume.pdf"; // Set the desired file name
+      link.click();
+    };
 
   return (
     <nav
@@ -61,6 +70,17 @@ const Navbar = () => {
               <a href={`#${nav.id}`} className="ml-6">{nav.title}</a>
             </li>
           ))}
+          <li
+            className={`${
+              active === "Resume" ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer ml-6`}
+            onClick={() => {
+              setActive("Resume");
+              handleResumeDownload(); // Trigger download when "Resume" is clicked
+            }}
+          >
+            Resume
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -91,6 +111,17 @@ const Navbar = () => {
                   <a href={`#${nav.id}`} className="">{nav.title}</a>
                 </li>
               ))}
+              <li
+                className={`${
+                  active === "Resume" ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => {
+                  setActive("Resume");
+                  handleResumeDownload(); // Trigger download when "Resume" is clicked
+                }}
+              >
+                Resume
+              </li>
             </ul>
           </div>
         </div>
